@@ -1,11 +1,16 @@
 import { Avatar } from '@material-ui/core'
-import React, { Component } from 'react'
+import React from 'react'
 import './Sidebar.css'
 
-export class Sidebar extends Component {
-  render() {
-    return (
-      <div className='sidebar'>
+function Sidebar() {
+  const recentItem = (topic) => {
+    <div className='sidebar_recentItem'>
+      <span className='sidebar_hash'>#</span>
+      <p>{topic}</p>
+    </div>
+}
+return (
+    <div className='sidebar'>
         <div className='sidebar_top'>
             <img src='https://images.unsplash.com/photo-1579546929518-9e396f3cc809?ixlib=rb-1.2.1&ixid=MnwxMjA3fDB8MHxleHBsb3JlLWZlZWR8MXx8fGVufDB8fHx8&w=1000&q=80' alt=''/>
             <Avatar className='sidebar_avatar'/>
@@ -22,12 +27,13 @@ export class Sidebar extends Component {
                 <p className='sidebar_statNumber'>2,448</p>
             </div>
         </div>
-        <div className='sidebar_button'>
+        <div className='sidebar_bottom'>
             <p>Recent</p>
+            {recentItem('reactJs')}
+            
         </div>
-      </div>
-    )
-  }
+    </div>
+)
 }
 
 export default Sidebar
