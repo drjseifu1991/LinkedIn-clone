@@ -57,6 +57,10 @@
     margin-top: 10px;
 }
 
+.sidebar_bottom > p {
+    font-size: 13px;
+    padding-bottom: 10px;
+}
 .sidebar_stat > p {
     color: gray;
     font-size: 13px;
